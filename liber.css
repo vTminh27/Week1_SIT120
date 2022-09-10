@@ -1,0 +1,230 @@
+* {
+    margin: auto;   
+}
+
+body {
+    background-color: #0f0000;
+}
+
+.homepage {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+header h1 a{
+    font-family: 'hatton', 'Neue Montreal', sans-serif;
+    text-decoration: none;
+    color: rgb(146, 170, 127);
+}
+
+#box {
+    height: 100%;
+    width: 100%;
+    max-width: fit-content;
+    position: relative;
+    left: 0;
+    border-bottom: 2px solid rgb(181, 224, 161);
+    background: none;
+    font-size: 35px;
+}
+
+header p {
+    font-family: 'Agrandir', 'Neue Montreal', sans-serif;
+    font-size: 22px;
+    padding-top: 20px;
+    color: rgb(41, 71, 16);
+    text-align: center;
+}
+
+.homepage .question {
+    margin-top: 4%;
+    font-size: 35px;
+    font-family: 'Space Mono', monospace;
+    color: darkgreen;
+}
+
+.image {
+    position: relative;
+    width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+
+}
+
+.image_img {
+    display: block;
+    width: 30%;
+}
+
+.image a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Space Mono', monospace;
+}
+
+/*IMAGE 1*/
+
+.imageOverlay {
+    position: absolute;
+    top: 15px;
+    left: 40px;
+    bottom: 10px;
+    width: 168px;
+    height: 163px;
+    border-radius: 50%;
+    background: rgba(44, 43, 43, 0.6);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.imageOverlay--blur {
+    backdrop-filter: blur(5px);
+}
+
+.imageOverlay > * {
+    transform: translateY(20px);
+    transition: opacity 0.25s;
+}
+
+.imageOverlay:hover {
+    opacity: 1;
+}
+
+.imageOverlay:hover > * {
+    transform: translateY(0px);
+}
+
+.image_description {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*IMAGE 2*/
+
+.imageOverlay2 {
+    position: absolute;
+    top: 5px;
+    left: 273px;
+    bottom: 10px;
+    width: 150px;
+    height: 155px;
+    border-radius: 50%;
+    background: rgba(44, 43, 43, 0.6);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.imageOverlay2--blur {
+    backdrop-filter: blur(5px);
+}
+
+.imageOverlay2 > * {
+    transform: translateY(20px);
+    transition: opacity 0.25s;
+}
+
+.imageOverlay2:hover {
+    opacity: 1;
+}
+
+.imageOverlay2:hover > * {
+    transform: translateY(0px);
+}
+
+/*IMAGE 3*/
+
+.imageOverlay3 {
+    position: absolute;
+    top: 5px;
+    left: 500px;
+    bottom: 10px;
+    width: 162px;
+    height: 170px;
+    border-radius: 50%;
+    background: rgba(44, 43, 43, 0.6);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.imageOverlay3--blur {
+    backdrop-filter: blur(5px);
+}
+
+.imageOverlay3 > * {
+    transform: translateY(20px);
+    transition: opacity 0.25s;
+}
+
+.imageOverlay3:hover {
+    opacity: 1;
+}
+
+.imageOverlay3:hover > * {
+    transform: translateY(0px);
+}
+
+#toggle {
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 60px;
+    border-radius: 160px;
+    background: #222;
+    transition: 0.5s;
+    margin-top: 200px;
+    box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+                inset 0 8px 8px rgba(0, 0, 0, 0.1),
+                inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+}
+
+#toggle.active {
+    background: #fff;
+    box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1),
+                inset 0 2px 8px rgba(0, 0, 0, 0.1),
+                inset 0 -4px 8px rgba(0, 0, 0, 0.05);
+}
+
+#toggle .indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(to bottom, #444, #222);
+    border-radius: 50%;
+    transform: scale(0.9);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+                inset 0 4px 4px rgba(255, 255, 255, 0.2),
+                inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+}
+
+#toggle.active .indicator {
+    left: 40px;
+    background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+    box-shadow: inset 0 8px 20px rgba(0, 0, 0, 0.1),
+                inset 0 4px 4px rgba(255, 255, 255, 1),
+                inset 0 -4px 4px rgba(255, 255, 255, 1);
+}
+
+body.active {
+    background: #fff;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+       
+        <title>LIBER</title>
+        <link type="text/css" rel="stylesheet" href="./liber.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="box">
+                <h1 class="title"><a href="./liber.html">LIBER</a></h1>
+            </div>
+            <p>'I am allowed to take the time to heal'<p>
+        </header>
+        <div class="homepage">
+            <p class="question">How was your day?</p>
+            <div class="image">
+                <img class="image_img" src="image/grateful.png">
+                <div class="imageOverlay imageOverlay--blur">
+                   <p class="image_description">
+                    <a href="#">Grateful</a>
+                   </p>
+                </div>
+                <img class="image_img" src="image/calm.png">
+                <div class="imageOverlay2 imageOverlay2--blur">
+                   <p class="image_description">
+                    <a href="#">Calm</a>
+                   </p>
+                </div>
+                <img class="image_img" src="image/worriesome.png">
+                <div class="imageOverlay3 imageOverlay3--blur">
+                   <p class="image_description">
+                    <a href="#">Worrisome</a>
+                   </p>
+                </div>
+            </div>
+            <div id="toggle">
+                <i class="indicator"></i>
+            </div>
+            <script>
+                const body = document.querySelector('body');
+                const toggle =document.getElementById('toggle');
+                toggle.onclick = function(){
+                    toggle.classList.toggle('active');
+                    body.classList.toggle('active');
+                }
+            </script>
+        </div>
+    </body>
+</html>
